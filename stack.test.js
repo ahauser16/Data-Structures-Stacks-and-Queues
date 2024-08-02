@@ -6,17 +6,31 @@ beforeEach(function() {
   stack = new Stack();
 });
 
+// describe("push", function() {
+//   it("places the value at the top of the stack and returns undefined", function() {
+//     expect(stack.push(10)).toBe(undefined);
+//     expect(stack.first.val).toBe(10);
+//     expect(stack.last.val).toBe(10);
+//     stack.push(100);
+//     expect(stack.first.val).toBe(100);
+//     expect(stack.last.val).toBe(10);
+//     stack.push(1000);
+//     expect(stack.first.val).toBe(1000);
+//     expect(stack.last.val).toBe(10);
+//   });
+// });
+
 describe("push", function() {
   it("places the value at the top of the stack and returns undefined", function() {
     expect(stack.push(10)).toBe(undefined);
-    expect(stack.first.val).toBe(10);
-    expect(stack.last.val).toBe(10);
+    expect(stack.top.val).toBe(10);
+    expect(stack.bottom.val).toBe(10);
     stack.push(100);
-    expect(stack.first.val).toBe(100);
-    expect(stack.last.val).toBe(10);
+    expect(stack.top.val).toBe(100);
+    expect(stack.bottom.val).toBe(10);
     stack.push(1000);
-    expect(stack.first.val).toBe(1000);
-    expect(stack.last.val).toBe(10);
+    expect(stack.top.val).toBe(1000);
+    expect(stack.bottom.val).toBe(10);
   });
 });
 
